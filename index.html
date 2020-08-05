@@ -19,8 +19,8 @@
     <div id="about">
         <img src="aboutImg.jpg" alt="Image">
         <div id="description">
-            <p>I am Imran Šehić, I am 20 years old and I am a certified Java developer from Oracle.</p>
-            <p>I am also a certified MySQL database administrator.</p>
+            <p>I am Imran Šehić, I am <span id="age"></span> years old and I am a Java developer by profession.</p>
+            <p>I am also a MySQL database administrator.</p>
             <p>Besides programming i speak 4 languages: italian, bosnian, english and german.</p>
         </div>
     </div>
@@ -49,5 +49,10 @@
         <a href="https://github.com/Imran-Sehic" target="_blank"><i class='foot fa fa-github'></i></a>
         <a href="https://www.instagram.com/imran_sehic/" target="_blank"><i class="foot fa fa-instagram"></i></a>
     </footer>
+    <script>
+        let age = document.getElementById('age');
+        let date = new Date(1999, 9, 16);
+        age.innerText = Math.floor((new Date() - date) / 31536000000);
+    </script>
 </body>
 </html>
